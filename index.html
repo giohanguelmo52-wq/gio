@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIOSTORE // ARCHIVE</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Outfit:wght@100;900&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Ruido estético de fondo */
+        .noise {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.05; pointer-events: none; z-index: 999;
+        }
+
+        /* Cursor Personalizado */
+        .cursor {
+            width: 20px; height: 20px; border: 1px solid #fff; border-radius: 50%;
+            position: fixed; pointer-events: none; z-index: 1000;
+            transition: transform 0.1s; transform: translate(-50%, -50%);
+        }
+
+        header {
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+            overflow: hidden; border-bottom: 1px solid #111;
+        }
+
+        .hero-title {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: clamp(5rem, 25vw, 20rem);
+            line-height: 0.8; letter-spacing: -0.08em;
+            text-align: center; color: transparent;
+            -webkit-text-stroke: 1px #333;
+            transition: 0.5s;
+        }
+
+        .hero-title:hover {
+            color: #fff; -webkit-text-stroke: 0px;
+            filter: drop-shadow(0 0 50px rgba(255,255,255,0.2));
+        }
+
+        /* Secciones de Trabajo */
+        .section-label {
+            padding: 100px 5% 20px; font-size: 0.7rem; letter-spacing: 5px; color: #555;
+        }
+
+        .gallery { padding: 0 5%; }
+
+        .project {
+            display: flex; align-items: flex-end; justify-content: space-between;
+            padding: 100px 0; border-bottom: 1px solid #111;
+            transition: 0.5s;
+        }
+
+        .project:hover { background: #050505; }
+
+        .project-info { max-width: 400px; }
+        .project-info h2 { font-size: 4rem; font-weight: 900; margin-bottom: 20px; }
+        .project-info p { color: #666; font-size: 1rem; line-height: 1.6; }
+
+        .project-img {
+            width: 50%; height: 500px; background: #080808;
+            border-radius: 2px; display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+            border: 1px solid #111;
+        }
+
+        .project-img img {
+            max-width: 70%; max-height: 70%;
+            transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            filter: grayscale(1);
+        }
+
+        .project:hover .project-img img {
+            transform: scale(1.1); filter: grayscale(0);
+        }
+
+        /* Próximamente Estilo Industrial */
+        .coming-soon-container {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+            background: #111; margin-top: 100px;
+        }
+
+        .soon-box {
+            background: #000; height: 300px; display: flex;
+            align-items: center; justify-content: center;
+            font-family: 'Archivo Black'; font-size: 2rem; color: #111;
+            transition: 0.3s;
+        }
+
+        .soon-box:hover { color: #222; }
+
+        /* Contacto / Footer */
+        .footer-cta {
+            padding: 200px 5%; text-align: left;
+        }
+
+        .footer-cta h3 { font-size: clamp(2rem, 8vw, 6rem); font-weight: 900; line-height: 0.9; }
+        
+        .contact-link {
+            display: inline-block; margin-top: 40px;
+            font-size: 2rem; color: #fff; text-decoration: none;
+            border-bottom: 5px solid #fff; padding-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .contact-link:hover { color: #55ff55; border-color: #55ff55; transform: skewX(-10deg); }
+
+        .discord-id { color: #333; font-size: 1rem; margin-top: 20px; display: block; }
+
+    </style>
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="cursor" id="cursor"></div>
+
+<header>
+    <h1 class="hero-title">GIO<br>STORE</h1>
+</header>
+
+<div class="section-label">SELECTED WORKS // 2026</div>
+
+<div class="gallery">
+    <div class="project">
+        <div class="project-info">
+            <h2>01.</h2>
+            <p><strong>INFINITY BRANDING</strong><br>Identidad de alto impacto visual para ecosistemas de servidores Minecraft.</p>
+        </div>
+        <div class="project-img">
+            <img src="https://cdn.discordapp.com/attachments/1420079817650475140/1463049030794739823/308-3081601_minecraft-server-logo-infinity-hd-png-download-removebg-preview.png?ex=69706a17&is=696f1897&hm=cba7d83e9bf21e15017206ea351d8ded5579e55aabac0dd66591030ac80d8555" alt="Infinity">
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project-info">
+            <h2>02.</h2>
+            <p><strong>E-SPORTS CORE</strong><br>Vectores premium para organizaciones competitivas que buscan autoridad visual.</p>
+        </div>
+        <div class="project-img">
+            <img src="https://cdn.discordapp.com/attachments/1420079817650475140/1463049293236801597/d7885d207382359.Y3JvcCw5OTksNzgyLDAsMTA4-removebg-preview.png?ex=69706a55&is=696f18d5&hm=9d057f507a608910c3f77c16443a91baabd84ab5f3d826f76855ac8ddb9fa2ef" alt="E-Sports">
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project-info">
+            <h2>03.</h2>
+            <p><strong>SEVAST CONCEPT</strong><br>Logotipos de alta complejidad con enfoque en ilustración detallada.</p>
+        </div>
+        <div class="project-img">
+            <img src="https://cdn.discordapp.com/attachments/1420079817650475140/1463049888546689035/sevast-logo9-removebg-preview.png?ex=69706ae3&is=696f1963&hm=5a9b461b384aada655a5aab2f6e4a25ebee4f5874cc7cad1deb1905b339b3552" alt="Sevast">
+        </div>
+    </div>
+</div>
+
+<div class="section-label">PIPELINE // PRÓXIMAMENTE</div>
+<div class="coming-soon-container">
+    <div class="soon-box">SOON</div>
+    <div class="soon-box">SOON</div>
+</div>
+
+<div class="footer-cta">
+    <h3>¿BUSCAS<br>RESULTADOS<br>DIFERENTES?</h3>
+    <a href="#" class="contact-link">CONTRATAR GIOSTORE</a>
+    <span class="discord-id">DISCORD ID: giohanguelmo</span>
+</div>
+
+<footer style="padding: 100px 5%; color: #222; font-size: 0.8rem; border-top: 1px solid #111;">
+    GIOSTORE // UNA DIVISIÓN DE ARTE DIGITAL.
+</footer>
+
+<script>
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+</script>
+
+</body>
+</html>
